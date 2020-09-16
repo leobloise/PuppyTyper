@@ -1,0 +1,8 @@
+{
+    "selectorForUser": "#userid",
+    "selectForPassword": "#conteudoid > div.container-fluid > main > div > div:nth-child(4) > div > div:nth-child(1) > form > div:nth-child(2) > div > input",
+    "loginButton": "#conteudoid > div.container-fluid > main > div > div:nth-child(4) > div > div:nth-child(1) > form > a",
+    "forward": "#col2 > div.ng-scope > div > a",
+    "blueButton": "#col2 > div.ng-scope > div > div > a.btn.btn-lg.btn-primary",
+    "buttonToContinue": "#col2 > div.ng-scope > div > a.btn.btn-lg.btn-primary"
+}
