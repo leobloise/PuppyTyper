@@ -34,6 +34,11 @@ class PuppyTyper {
         await page.click(field);
     }
 
+    async _select(page, select, value) {
+        await page.waitForSelector(select);
+        await page.select(select, value);
+    }
+
     async routine() {
         throw new Error('devo ser modificado')
     }

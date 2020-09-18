@@ -4,5 +4,7 @@
     "loginButton": "#conteudoid > div.container-fluid > main > div > div:nth-child(4) > div > div:nth-child(1) > form > a",
     "forward": "#col2 > div.ng-scope > div > a",
     "blueButton": "#col2 > div.ng-scope > div > div > a.btn.btn-lg.btn-primary",
-    "buttonToContinue": "#col2 > div.ng-scope > div > a.btn.btn-lg.btn-primary"
+    "buttonToContinue": "#col2 > div.ng-scope > div > a.btn.btn-lg.btn-primary",
+    "venderButton": "#loginpath > div > div > div.modal-body > div:nth-child(3) > p > a",
+    "adesaoButton": "#col2 > div.ng-scope > div > div:nth-child(1) > div > div.row.justify-content-center > div > label"
 }
