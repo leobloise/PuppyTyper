@@ -1,6 +1,6 @@
-import PuppyTyper from './Model/PuppyTyper.js'
+import PuppyTyper from '../src/Model/PuppyTyper.js'
 
-class MyTyper_Benevix_dev020 extends PuppyTyper {
+class MyTyper_Benevix_EnvTeste extends PuppyTyper {
 
     constructor(CSSjson, page){
         super(CSSjson, page)
@@ -8,7 +8,7 @@ class MyTyper_Benevix_dev020 extends PuppyTyper {
 
     async routine() {
 
-        await this._page.goto('https://benevix.dev020.planium.io/web/login/')
+        await this._page.goto('https://benevix.test.planium.io/web/login/')
 
         await this._typeInformation(this._page, this.options.selectorForUser, "vendedor0")
     
@@ -16,31 +16,23 @@ class MyTyper_Benevix_dev020 extends PuppyTyper {
 
         await this._page.click(this.options.loginButton);
 
-        await this._clickInComponent(this._page, "#loginpath > div > div > div.modal-body > div:nth-child(3) > p > a");
+        await this._page.waitForTimeout(2000)
+
+        await this._clickInComponent(this._page, this.options.venderButton);
 
         await this._page.waitForTimeout(10000)
 
-        // await this._shcemaToClick(this._page, this.options.forward);
+        await this._shcemaToClick(this._page, this.options.forward);
+
+        await this._normalClick(this._page, this.options.adesaoButton);
         
-        // await this._typeInformation(this._page, "#simuNome", "LEONARDO")
-
-        // await this._typeInformation(this._page, "#simuEmail", "leonardo.bloise@planium.io");
-
-        // // await this._page.waitForTimeout(10000);
-
-        await this._clickInComponent(this._page, "#col2 > div.ng-scope > div > a");
-
-        await this._page.waitForTimeout(5000)
-
-        await this._normalClick(this._page, "#col2 > div.ng-scope > div > div:nth-child(1) > div > div.row.justify-content-center > div > label");
-        
-        await this._normalClick(this._page,"#col2 > div.ng-scope > div > a.btn.btn-lg.btn-primary");
+        await this._normalClick(this._page, this.options.buttonToContinue);
 
         await this._select(this._page, "#col2 > div.ng-scope > div > div > form > div:nth-child(1) > select", "18")
-        
+
         await this._clickInComponent(this._page, this.options.blueButton);
 
-        await this._select(this._page, "#col2 > div.ng-scope > div > div > form > select:nth-child(2)", "14")
+        await this._select(this._page, "#col2 > div.ng-scope > div > div > form > select:nth-child(2)", "16")
         
         await this._clickInComponent(this._page, this.options.blueButton);
 
@@ -66,4 +58,4 @@ class MyTyper_Benevix_dev020 extends PuppyTyper {
     }
 }
 
-export default MyTyper_Benevix_dev020;
+export default MyTyper_Benevix_EnvTeste;

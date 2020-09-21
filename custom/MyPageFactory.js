@@ -1,4 +1,4 @@
-import PageFactory from './Factory/PageFactory.js'
+import PageFactory from '../src/Factory/PageFactory.js'
 import EventEmitter from 'events'
 
 class MyPageFactory extends PageFactory {
@@ -14,7 +14,7 @@ class MyPageFactory extends PageFactory {
         await super._applyConfig(page)
         
         page.on('dialog', dialog => {
-            this.pageEvents.emit('alert', dialog)
+            this.pageEvents.emit('prompt', dialog)
         })
     }
 }

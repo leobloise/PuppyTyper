@@ -13,7 +13,7 @@ let defaultOptions = {
 
 class BrowserFactory {
 
-    constructor(options) {
+    constructor(options=defaultOptions) {
         this._options = (this._validateOptions(options))?options: defaultOptions;
     }
 
@@ -30,6 +30,8 @@ class BrowserFactory {
                 return false;
             }
         }
+
+        return true;
 
     }
 
